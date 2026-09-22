@@ -6,7 +6,8 @@
     "homepage": "https://seen.com",
     "keywords": ["whatsapp", "whatsapp-business-api", "seen"],
     "support": {
-        "source": "https://github.com/vsartech/wa-project/tree/main/packages/seen-php"
+        "source": "https://github.com/vsartech/seenwa-php",
+        "issues": "https://github.com/vsartech/seenwa-php/issues"
     },
     "require": {
         "php": ">=8.1",
