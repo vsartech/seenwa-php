@@ -1,0 +1,33 @@
+{
+    "name": "vsartech/seenwa",
+    "description": "Official PHP SDK for the Seen WhatsApp Business API.",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://seen.com",
+    "keywords": ["whatsapp", "whatsapp-business-api", "seen"],
+    "support": {
+        "source": "https://github.com/vsartech/wa-project/tree/main/packages/seen-php"
+    },
+    "require": {
+        "php": ">=8.1",
+        "ext-json": "*",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Seen\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Seen\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "minimum-stability": "stable"
+}
