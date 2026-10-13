@@ -105,7 +105,10 @@ class SeenClient
         $json = json_decode($responseBody, true);
 
         if ($status < 200 || $status >= 300 || !is_array($json)) {
-            throw new SeenApiException("Seen API request failed with status {$status}", $status, $json);
+            $apiMessage = is_array($json) && isset($json['error']) && is_string($json['error']) && $json['error'] !== ''
+                ? $json['error']
+                : "Seen API request failed with status {$status}";
+            throw new SeenApiException($apiMessage, $status, $json);
         }
 
         return $json['data'] ?? null;
